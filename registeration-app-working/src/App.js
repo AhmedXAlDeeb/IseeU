@@ -1,12 +1,12 @@
-// src/App.js
 import React from 'react';
-import Registeration from './Registeration';
+import Registration from './Registeration';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Registeration />
+        <h1>Welcome to the Registration Page</h1>
+        <Registration />
       </header>
     </div>
   );

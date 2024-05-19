@@ -1,8 +1,7 @@
-// src/Registration.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Registeration = () => {
+const Registration = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -21,9 +20,10 @@ const Registeration = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/register', formData);
-      console.log(response.data);
+      alert(response.data.message);
     } catch (error) {
       console.error('Error during registration:', error);
+      alert('Registration failed: ' + error.response.data.error);
     }
   };
 
@@ -49,4 +49,4 @@ const Registeration = () => {
   );
 };
 
-export default Registeration;
+export default Registration;
