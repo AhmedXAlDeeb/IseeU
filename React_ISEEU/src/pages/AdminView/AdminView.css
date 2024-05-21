@@ -1,7 +1,23 @@
 html, body {
     background-color: #81AFDD!important;
 }
-#BedCapPanel{
+#AdminView{
     background-color: #AE67FA;
-    width: 100%;
+    min-height: 100%;
+}
+#bedCap{
+    background-color: #A3CCC7;
+    height: 30vh;
+}
+#bedCapChart{
+}
+#chartDiv{
+    align-self: center;
+}
+#patientNo{
+    height: 30vh;
+    background-color: #F49867;
+}
+#patientStats{
+    background-color: #FE686B;
 }

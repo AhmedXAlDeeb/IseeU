@@ -1,11 +1,9 @@
 import React from 'react';
 import "./chart.css";
-// LineChart.js
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
 
 const Chart = (props) => {
     const data = {
@@ -56,7 +54,7 @@ const Chart = (props) => {
         },
     };
 
-    return <Doughnut data={data} options={options} />;
+    return <Doughnut data={data} options={options} style={{ width: props.width }} />;
 };
 
-export default Chart
+export default Chart;
