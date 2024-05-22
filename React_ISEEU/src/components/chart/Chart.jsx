@@ -13,8 +13,8 @@ const Chart = (props) => {
                 label: 'data',
                 data: props.data,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
+                    '#F5F5F5',
+                    '#18625b',
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
@@ -22,7 +22,7 @@ const Chart = (props) => {
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
+                    '#F5F5F5',
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
@@ -34,10 +34,16 @@ const Chart = (props) => {
     };
 
     const options = {
+        maintainAspectRatio: false,
         responsive: true,
         plugins: {
             legend: {
-                display: false, // Hide the legend labels
+                display: true,
+                position: "bottom",
+                labels: {
+                        color: '#f5f5f5' // Change label color here
+
+                }
             },
             tooltip: {
                 callbacks: {
@@ -54,7 +60,11 @@ const Chart = (props) => {
         },
     };
 
-    return <Doughnut data={data} options={options} style={{ width: props.width }} />;
+    return (
+        <div style={{ height: '25vh' }}>
+            <Doughnut data={data} options={options} />
+        </div>
+    );
 };
 
 export default Chart;
