@@ -4,7 +4,9 @@ html, body {
 }
 html, div {
     border-radius: 3vh;
+    overflow: hidden;
 }
+
 #AdminView{
     min-height: 100%;
 }
@@ -82,4 +84,49 @@ button#dischargeButton {
 
 button#dischargeButton:hover {
     background-color: #258176 ; /* Darker green on hover */
+}
+#doctorsPanelTitle{
+    color: #258176;
+    text-align: left;
+    font-size: 3vh;
+    font-weight: 600;
+}
+#doctorsNo{
+    font-size: 2vh;
+    color: #F5F5F5;
+    background-color: #258176;
+    padding: .5vh;
+    border-radius: 3vh;
+}
+#doctorsPanel {
+    max-width: 100%; /* Set the maximum width for the panel */
+    margin-top: 20px; /* Add some spacing at the top */
+    padding: 10px; /* Optional padding for better appearance */
+    white-space: nowrap; /* Prevent line breaks to keep items in a row */
+}
+
+#doctorCards {
+    overflow-x: auto;
+    gap: 10px; /* Space between the cards */
+}
+
+#doctorCards::-webkit-scrollbar {
+    height: 8px;
+}
+
+#doctorCards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#doctorCards::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#doctorCards::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+#statsPanel{
+    background-color: #040C18;
 }

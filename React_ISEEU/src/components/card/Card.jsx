@@ -3,7 +3,7 @@ import "./Card.css";
 const Card = (props) => {
 
     return (<div className={"Card"}>
-        <img className="card-img" src={"https://placehold.co/600x300"} />
+        <img className="card-img" src={"https://placehold.co/600x250"} />
         <div className={"card-body"}>
             <p className={"infoHead"}>Name</p>
             <p className={"cardInfo"}>{props.data[0]} {props.data[1]}</p>

@@ -6,6 +6,8 @@ const AdminView = () => {
     const bedsData = [55, 22]; // Assuming 55 beds available, 22 taken
     const patientsNumber = 55;
 
+    //should return number not 55 in span in doctors title
+
     return (
         <div className="container-fluid">
             <div id="AdminView" className="row col-9 offset-3 g-5">
@@ -28,11 +30,9 @@ const AdminView = () => {
                             />
                         </div>
                     </div>
-                    <Card data={["Miguel","O'Hara","22","Male"]} />
-                    <Card data={["Miguel","O'Hara","22","Male"]} />
                 </div>
 
-                <div id="AdminViewRight" className="col-6" >
+                <div id="AdminViewRight" className="col-6">
                     <div id="patientNo" className="row">
                         <div id="patientStats" className="col-6">
                             <p id="patientNumber"> {patientsNumber} </p>
@@ -48,7 +48,24 @@ const AdminView = () => {
                         </div>
                     </div>
                 </div>
+
+                <div id="doctorsPanel">
+                <p id={"doctorsPanelTitle"}> Doctors <span id={"doctorsNo"}>55</span> </p>
+                <div id={"doctorCards"}>
+                    <Card data={["Miguel", "O'Hara", "22", "Male"]}/>
+                    <Card data={["Miguel", "O'Hara", "22", "Male"]}/>
+                    <Card data={["Miguel", "O'Hara", "22", "Male"]}/>
+                    <Card data={["Miguel", "O'Hara", "22", "Male"]}/>
+                    <Card data={["Miguel", "O'Hara", "22", "Male"]}/>
+                    <Card data={["Miguel", "O'Hara", "22", "Male"]}/>
+                </div>
+                </div>
+
+                <div id="statsPanel">
+                </div>
             </div>
+
+
         </div>
     );
 };
