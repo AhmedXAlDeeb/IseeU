@@ -1,0 +1,25 @@
+.Card{
+    background-color: #F5F5F5;
+    min-height: 38vh;
+    max-height: 38vh;
+    width: 30vh;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 3vh;
+    display: inline-block;
+    margin: 2vh;
+}
+.card-img{
+    margin-bottom: 1.5vh;
+    border-bottom-left-radius: 5vh;
+}
+.infoHead{
+    margin-bottom: -1VH;
+    font-size: 2vh;
+}
+.cardInfo{
+    color: #258176;
+    margin-bottom: .5vh;
+    font-size: 3vh;
+    font-weight: 600;
+}

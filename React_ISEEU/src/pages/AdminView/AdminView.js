@@ -1,6 +1,6 @@
 import React from 'react';
 import "./AdminView.css";
-import { Chart } from '../../components'; // Adjust import statement based on actual component paths
+import {Card, Chart} from '../../components'; // Adjust import statement based on actual component paths
 
 const AdminView = () => {
     const bedsData = [55, 22]; // Assuming 55 beds available, 22 taken
@@ -28,9 +28,11 @@ const AdminView = () => {
                             />
                         </div>
                     </div>
+                    <Card data={["Miguel","O'Hara","22","Male"]} />
+                    <Card data={["Miguel","O'Hara","22","Male"]} />
                 </div>
 
-                <div id="AdminViewRight" className="col-6   " >
+                <div id="AdminViewRight" className="col-6" >
                     <div id="patientNo" className="row">
                         <div id="patientStats" className="col-6">
                             <p id="patientNumber"> {patientsNumber} </p>
