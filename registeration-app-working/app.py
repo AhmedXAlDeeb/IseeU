@@ -18,15 +18,15 @@ cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 @app.route('/register', methods=['POST'])
 def register():
     data = request.json
+    print(data)
+    NID = data.get('NID')
     username = data.get('username')
-    email = data.get('email')
     password = data.get('password')
-
     try:
         cursor.execute(
-            "INSERT INTO employee (username, emailaddress, password, firstname, role, gender) "
-            "VALUES (%s, %s, %s, %s, %s, %s)",
-            (username, email, password, "John", "Doctor", "Male")
+            "INSERT INTO employee (nid, username, password, firstname, emailaddress, gender, role) "
+            "VALUES (%s, %s, %s, %s, %s, %s, %s)",
+            (NID, username, password, "7amada", "talola@gmail.com", "Male", "Admin")
         )
         conn.commit()
         return jsonify({"message": "User registered successfully"}), 200
